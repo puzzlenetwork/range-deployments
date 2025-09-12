@@ -16,10 +16,10 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
 
   const singleSwap = {
     poolId: poolId,
-    kind: 0,
+    kind: 1,
     assetIn: input.LID,
     assetOut: input.VOV,
-    amount: fp(0.000001),
+    amount: fp(0.01),
     userData: "0x",
     sender: signer.address,
     fromInternalBalance: false,
@@ -32,7 +32,7 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
     toInternalBalance: false,
   };
 
-  const limit = fp(0.0000001);
+  const limit = fp(1);
   const deadline = 1856896104;
 
   const vaultSwapReceipt = await (
