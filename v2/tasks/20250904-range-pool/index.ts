@@ -35,7 +35,7 @@ export default async (task: Task, { force, from }: TaskRunOptions = {}): Promise
       newRangePoolParams.rateProviders,
       newRangePoolParams.swapFeePercentage,
       signer.address,
-      "0xfb61e42f07c6c93c5c8ec9f6c6861bed2208bfa0d85a028822656e93bdc7dd8d" // change the salt every time for a new pool deployment
+      "0xfb61e42f07c6c93c5c8ec9f6c6861bed2208bfa0d85a028822656e93bdc7de8d" // change the salt every time for a new pool deployment
     )
   ).wait();
   const event = expectEvent.inReceipt(poolCreationReceipt, 'PoolCreated');
